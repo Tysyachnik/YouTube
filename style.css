@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-menuader {
+  justify-content: space-between;
+}
+
+.chanel-navigation-menu {
+}
+
+.userPicImg {
+  border-radius: 15px;
+}
+
+.userPic {
+  border-radius: none;
+}
+
+.header-buttons {
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+}
+
+.channel-left-side-menu {
+  flex-direction: column;
+}
+
