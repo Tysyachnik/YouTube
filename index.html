@@ -9,27 +9,31 @@
   </head>
   <body>
     <header>
-      <div class="header-menu">
-        <button>
-          <img
-            class="side-menu-button"
-            src="img/svgImp/side-menu-button.svg"
-            width="20px"
-            height="17px"
-            alt="userPic"
-          />
-        </button>
-        <button>
-          <img
-            class="logo-button"
-            src="img/svgImp/logo.svg"
-            width="116px"
-            height="25px"
-            alt="userPic"
-          />
-        </button>
+      <div class="left-header-buttons">
+        <div class="header-menu">
+          <button>
+            <img
+              class="side-menu-button"
+              src="img/svgImp/side-menu-button.svg"
+              width="20px"
+              height="17px"
+              alt="userPic"
+            />
+          </button>
+          <button>
+            <img
+              class="logo-button"
+              src="img/svgImp/logo.svg"
+              width="116px"
+              height="25px"
+              alt="userPic"
+            />
+          </button>
+        </div>
+        <div class="search-Input">
+          <input type="text" placeholder="Search" size="50" />
+        </div>
       </div>
-      <div><input type="text" /></div>
       <div class="header-buttons">
         <button>
           <img
@@ -70,146 +74,177 @@
       </div>
     </header>
     <main>
-      <div class="visited-chanel-info">
-        <button>Userpic</button>
-        <button>Gets notice</button>
-        <button>Subscribe</button>
-      </div>
-      <div class="top-chanel-videoK">
-        <button>watching video</button>
-      </div>
-      <div class="chanel-navigation-menu">
-        <nav>
-          <button>Home</button>
-          <button>Videos</button>
-          <button>Playlists</button>
-          <button>Channels</button>
-          <button>Discussion</button>
-          <button>About</button>
+      <aside class="sidebar">
+        <div class="channel-left-side-menu">
           <button>
             <img
-              src="img/svgImp/search-loop.svg"
-              alt="Search"
-              width="19px"
-              height="19px"
+              src="img/svgImp/Home.svg"
+              alt="Home"
+              width="78px"
+              height="20px"
             />
           </button>
-        </nav>
-      </div>
-      <div class="channel-left-side-menu">
-        <button>
-          <img
-            src="img/svgImp/Home.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Trending.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Subscriptions.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Library.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/History.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Watch later.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Favourites.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Liked videos.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Music.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Games.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-        <button>
-          <img
-            src="img/svgImp/Show more.svg"
-            alt="Search"
-            width="19px"
-            height="20px"
-          />
-        </button>
-      </div>
-      <div class="subscriptions">
-        <button>user1</button>
-        <button>user2</button>
-        <button>user3</button>
-        <button>user4</button>
-        <button>user5</button>
-        <button>user6</button>
-        <button>Settings</button>
+          <button>
+            <img
+              src="img/svgImp/Trending.svg"
+              alt="Trending"
+              width="96px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Subscriptions.svg"
+              alt="Subscriptions"
+              width="132px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Library.svg"
+              alt="Library"
+              width="86px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/History.svg"
+              alt="History"
+              width="87px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Watch later.svg"
+              alt="Watch later"
+              width="119px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Favourites.svg"
+              alt="Favourites"
+              width="110px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Liked videos.svg"
+              alt="Liked videos"
+              width="123px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Music.svg"
+              alt="Music"
+              width="75px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Games.svg"
+              alt="Games"
+              width="86px"
+              height="20px"
+            />
+          </button>
+          <button>
+            <img
+              src="img/svgImp/Show more.svg"
+              alt="Show more"
+              width="115px"
+              height="20px"
+            />
+          </button>
+        </div>
+        <div class="subscriptions">
+          <p>Subscriptions</p>
+          <button>user1</button>
+          <button>user2</button>
+          <button>user3</button>
+          <button>user4</button>
+          <button>user5</button>
+          <button>user6</button>
+          <button>Settings</button>
+        </div>
+      </aside>
+      <div class="main-content">
+        <img
+          src="img/pngImg/Cover.png"
+          width="99%"
+          height="280px"
+          alt="cover-content"
+        />
+        <div class="visited-chanel-info">
+          <button>
+            <img
+              src="img/pngImg/visitedUserPic.png"
+              alt="visitedUserPic"
+              width="80px"
+              height="80px"
+            />
+          </button>
+          <div class="subscribeButtons">
+            <button class="getsNotice">
+              <img
+                src="img/svgImp/getsNotice.svg"
+                width="22px"
+                height="26px"
+                alt="getsNotice"
+              />
+            </button>
+            <button class="subscribeButton">
+              <img
+                src="img/svgImp/subscribeButton.svg"
+                width="154px"
+                height="40px"
+                alt="subscribeButton"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="chanel-navigation-menu">
+          <nav class="navigation-menu">
+            <button class="home-button">Home</button>
+            <button>Videos</button>
+            <button>Playlists</button>
+            <button>Channels</button>
+            <button>Discussion</button>
+            <button>About</button>
+            <button>
+              <img
+                src="img/svgImp/search-loop.svg"
+                alt="Search"
+                width="19px"
+                height="19px"
+              />
+            </button>
+          </nav>
+        </div>
+        <div class="top-chanel-video">
+          <video src="/img/pngImg/Cover.png"></video>
+          <button>watching video</button>
+        </div>
+        <div class="recommended-videos">
+          <p>Margaret Phelps videos</p>
+          <button>Arrows</button>
+          <button>video1</button>
+          <button>video2</button>
+          <button>video3</button>
+          <button>video4</button>
+          <button>video5</button>
+          <button>video6</button>
+        </div>
       </div>
     </main>
-    <footer>
-      <div>
-        <p>Margaret Phelps videos</p>
-        <button>Arrows</button>
-      </div>
-      <div class="recommended-videos">
-        <button>video1</button>
-        <button>video2</button>
-        <button>video3</button>
-        <button>video4</button>
-        <button>video5</button>
-        <button>video6</button>
-      </div>
-    </footer>
   </body>
 </html>
 

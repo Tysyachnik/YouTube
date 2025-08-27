@@ -31,21 +31,43 @@ button {
   margin: 0;
 }
 
+main {
+  display: flex;
+}
+
 header {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header-menuader {
+.header-menu {
   justify-content: space-between;
+  padding-left: 5px;
 }
 
-.chanel-navigation-menu {
+.left-header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 2;
 }
 
 .userPicImg {
   border-radius: 15px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 134px;
+  height: 100%;
+  margin: 5px;
+  padding-right: 150px;
+  gap: 20px;
 }
 
 .userPic {
@@ -53,12 +75,53 @@ header {
 }
 
 .header-buttons {
-  justify-content: space-between;
   padding: 5px;
   margin: 5px;
+  align-items: center;
 }
 
 .channel-left-side-menu {
+  display: flex;
   flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.subscriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  width: 834px;
+  height: 28px;
+}
+
+.search-Input {
+  display: flex;
+  justify-content: left;
+  width: 500px;
+}
+
+.visited-chanel-info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+.subscribeButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-button {
+  color: #f80101;
+  border-bottom: #f80101 2px solid;
 }
 
