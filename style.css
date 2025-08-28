@@ -65,6 +65,13 @@ input[type="text"] {
 p.bold {
   font-family: "Mulish", sans-serif;
   font-weight: 700;
+  font-size: 26px;
+}
+
+p.bold-subscriptions {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 p.subscribersInfo {
@@ -75,12 +82,7 @@ p.subscribersInfo {
 
 p.side-menu {
   font-family: "Mulish", sans-serif;
-  color: rgb(187, 186, 186);
-  white-space: nowrap;
-}
-
-p.side-subscriber {
-  font-family: "Mulish", sans-serif;
+  font-size: 16px;
   color: rgb(187, 186, 186);
   white-space: nowrap;
 }
@@ -107,7 +109,7 @@ p.side-menu-home {
 .visited-chanel-header {
   display: flex;
   gap: 10px;
-  width: 280px;
+  width: 300px;
   align-items: center;
 }
 
@@ -147,7 +149,7 @@ p.side-menu-home {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 20px;
+  gap: 15px;
 }
 
 .subscriptions {
@@ -200,6 +202,22 @@ p.side-menu-home {
   gap: 8px;
 }
 
+.setting-side-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.logo-side-subscribers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 26px;
+  height: 26px;
+  margin-top: 15px;
+}
+
 p.logoName {
   font-family: "Mulish", sans-serif;
   font-size: 1.5rem;
@@ -250,5 +268,97 @@ span.numberNotifications {
   height: 18px;
   font-family: "Mulish", sans-serif;
   text-align: center;
+}
+
+.top-chanel-video {
+  display: grid;
+  padding-top: 5%;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  width: 90%;
+  margin-right: 3%;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mainVideoPic {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mainVideoPic img {
+  display: block;
+  width: 540px;
+  height: auto;
+  position: relative;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  height: 250px;
+}
+
+.video-timecode {
+  position: absolute;
+  color: azure;
+  border-radius: 12px;
+  width: 47px;
+  height: 24px;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  font-size: 14px;
+
+  bottom: 8px;
+  right: 8px;
+  background: rgba(85, 85, 85, 0.7);
+  padding: 2px 6px;
+}
+
+.video-text {
+  font-family: "Mulish", sans-serif;
+  color: rgb(187, 186, 186);
+}
+
+.chanelVideoAndRecommendet {
+  display: flex;
+}
+
+.recommendet-channels {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-recommendet {
+  display: flex;
+  padding-top: 10%;
+}
+.logo-recommendet img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+p.recommendedUser {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  white-space: nowrap;
+  padding-left: 10px;
 }
 
