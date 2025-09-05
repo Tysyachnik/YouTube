@@ -2,6 +2,49 @@
   --radius: 20px;
   --primary-red: rgb(243, 0, 0);
   --sidebar-width: clamp(100px, 15vw, 180px);
+  --bg-color: #ffffff;
+  --input-bg-color: rgb(238, 238, 238);
+  --text-color: #000000;
+  --block-bg: #f9f9f9;
+  --secondary-text: #555555;
+  --primary-red: rgb(243, 0, 0);
+  --input-bg: #eeeeee;
+  --input-text: #000000;
+  --video-text: #bbbbbb;
+  --font-family: "Mulish", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #464646;
+    --text-color: #f1f1f1;
+    --block-bg: #202020;
+    --secondary-text: #cccccc;
+    --primary-red: #ff0000;
+    --input-bg: #303030;
+    --input-text: #f1f1f1;
+    --video-text: #e0e0e0;
+    --input-bg-color: rgb(168, 168, 168);
+  }
+  .sidebar > :first-child img:not([alt="Home"]) {
+    filter: invert(1) brightness(0.8);
+  }
+
+  .sidebar .setting-side-button img {
+    filter: invert(1) brightness(0.8);
+  }
+
+  .icon-loop {
+    content: url("img/svgImp/search-loop-dark.svg");
+  }
+
+  .side-menu-button {
+    content: url("img/svgImp/side-menu-button-dark.svg");
+  }
+
+  .header-buttons img:not([alt="userPic"]) {
+    filter: invert(1) brightness(0.8);
+  }
 }
 
 @font-face {
@@ -26,9 +69,11 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Mulish", sans-serif;
+  font-family: var(--font-family);
   width: 100%;
   padding: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 button {
@@ -53,8 +98,16 @@ header {
   box-sizing: border-box;
 }
 
+.header,
+.sidebar,
+.main-content,
+.footer-channel-videos {
+  color: var(--text-color);
+}
+
 .search-Input input[type="text"] {
-  background-color: rgb(238, 238, 238);
+  background-color: var(--input-bg-color);
+  color: var(--input-text);
   border-radius: var(--radius);
   height: 2.75rem;
   border: none;
@@ -84,6 +137,8 @@ header {
 p.bold {
   font-weight: 700;
   font-size: clamp(10px, 1.4vw, 24px);
+  color: var(--text-color);
+  font-family: var(--font-family);
 }
 
 p.bold-subscriptions {
@@ -104,6 +159,15 @@ p.side-menu {
 
 p.side-menu-home {
   color: var(--primary-red);
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+button.bold {
+  all: unset;
+  font-weight: 700;
+  color: var(--text-color);
+  font-family: "Mulish", sans-serif;
 }
 
 .header-menu {
@@ -242,6 +306,7 @@ p.logoName {
   letter-spacing: -1px;
   padding-left: 3px;
   margin: 0;
+  color: var(--text-color);
 }
 
 .subscribeButtons {
@@ -259,9 +324,11 @@ p.logoName {
 }
 
 .home-button {
+  all: unset;
   color: var(--primary-red);
   border-bottom: var(--primary-red) 2px solid;
   font-weight: 700;
+  font-family: var(--font-family);
 }
 
 .notifications {
@@ -399,6 +466,7 @@ p.recommendedUser {
   font-size: 18px;
   white-space: nowrap;
   padding-left: 10px;
+  color: var(--text-color);
 }
 
 .other-channel-videos {
@@ -434,6 +502,7 @@ p.recommendedUser {
   font-weight: 700;
   font-size: 16px;
   text-align: left;
+  color: var(--text-color);
 }
 
 .otherVideoPic {
