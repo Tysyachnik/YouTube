@@ -1,3 +1,9 @@
+:root {
+  --radius: 20px;
+  --primary-red: rgb(243, 0, 0);
+  --sidebar-width: clamp(100px, 15vw, 180px);
+}
+
 @font-face {
   font-family: "Mulish";
   src: url("./fonts/Mulish-VariableFont_wght.ttf") format("truetype");
@@ -20,8 +26,9 @@
 
 body {
   box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
   width: 100%;
-  height: 100%;
+  padding: 10px;
 }
 
 button {
@@ -33,88 +40,106 @@ button {
 
 main {
   display: flex;
+  width: 100%;
 }
 
 header {
   display: flex;
+  position: relative;
   width: 100%;
   padding-bottom: 2%;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
-input[type="text"] {
-  display: block;
+.search-Input input[type="text"] {
   background-color: rgb(238, 238, 238);
-  border-radius: 20px;
-  width: 830px;
-  height: 44px;
+  border-radius: var(--radius);
+  height: 2.75rem;
   border: none;
+  width: 100%;
+  height: 2.75rem;
   padding-left: 20px;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  box-sizing: border-box;
+}
+
+.search-Input {
+  display: flex;
+  position: absolute;
+  margin-left: var(--sidebar-width);
+  width: clamp(200px, 60%, 500px);
 }
 
 .input-search-loop {
-  position: absolute;
+  position: relative;
   top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+  right: 25px;
+  transform: translateY(60%);
   width: 19px;
   height: 19px;
 }
 
 p.bold {
-  font-family: "Mulish", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: clamp(10px, 1.4vw, 24px);
 }
 
 p.bold-subscriptions {
-  font-family: "Mulish", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
 
 p.subscribersInfo {
-  font-family: "Mulish", sans-serif;
   color: rgb(187, 186, 186);
   font-size: 0.6rem;
 }
 
 p.side-menu {
-  font-family: "Mulish", sans-serif;
   font-size: 16px;
   color: rgb(187, 186, 186);
   white-space: nowrap;
 }
 
 p.side-menu-home {
-  font-family: "Mulish", sans-serif;
-  color: rgb(243, 0, 0);
+  color: var(--primary-red);
 }
 
 .header-menu {
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
   padding-left: 5px;
   align-items: center;
-  width: 150px;
 }
 
 .left-header-buttons {
   display: flex;
-  gap: 5%;
-  width: 100%;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .visited-chanel-header {
   display: flex;
   gap: 10px;
-  width: 300px;
+  width: clamp(200px, 30vw, 300px);
   align-items: center;
 }
 
 .main-content {
-  flex: 2;
+  width: calc(100% - var(--sidebar-width));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main-content > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 4;
+  max-height: 280px;
+  object-fit: cover;
 }
 
 .userPicImg {
@@ -124,10 +149,10 @@ p.side-menu-home {
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 134px;
+  width: var(--sidebar-width);
   height: 100%;
   margin: 5px;
-  padding-right: 200px;
+  padding-right: clamp(10px, 5vw, 40px);
   gap: 20px;
 }
 
@@ -162,15 +187,8 @@ p.side-menu-home {
   display: flex;
   justify-content: space-between;
   margin: 5px;
-  width: 834px;
-  height: 28px;
-}
-
-.search-Input {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  width: 500px;
+  max-width: 834px;
+  height: 1.75rem;
 }
 
 .visited-chanel {
@@ -192,8 +210,8 @@ p.side-menu-home {
 .logo-button {
   display: flex;
   justify-content: space-around;
-  width: 116px;
-  height: 25px;
+  width: clamp(80px, 10vw, 116px);
+  height: 1.6rem;
 }
 
 .logo-side-button {
@@ -219,8 +237,7 @@ p.side-menu-home {
 }
 
 p.logoName {
-  font-family: "Mulish", sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
   font-weight: 700;
   letter-spacing: -1px;
   padding-left: 3px;
@@ -234,17 +251,16 @@ p.logoName {
 }
 
 .subscribeButton {
-  background-color: #f80101;
+  background-color: var(--primary-red);
   color: azure;
-  border-radius: 20px;
-  width: 154px;
-  height: 40px;
-  font-family: "Mulish", sans-serif;
+  border-radius: var(--radius);
+  width: clamp(120px, 20vw, 154px);
+  height: 2.5rem;
 }
 
 .home-button {
-  color: #f80101;
-  border-bottom: #f80101 2px solid;
+  color: var(--primary-red);
+  border-bottom: var(--primary-red) 2px solid;
   font-weight: 700;
 }
 
@@ -260,18 +276,16 @@ p.logoName {
 span.numberNotifications {
   position: absolute;
   top: -5px;
-  background-color: #f80101;
+  background-color: var(--primary-red);
   color: azure;
   border-radius: 50%;
   padding: 2px;
   width: 18px;
   height: 18px;
-  font-family: "Mulish", sans-serif;
   text-align: center;
 }
 
 .top-chanel-video {
-  display: grid;
   padding-top: 5%;
   display: flex;
   align-items: flex-start;
@@ -280,50 +294,72 @@ span.numberNotifications {
   background: none;
   cursor: pointer;
   text-align: left;
-  width: 90%;
+  width: 100%;
   margin-right: 3%;
+  height: auto;
+}
+
+.main-video-wrapper {
+  position: relative;
+  aspect-ratio: 540 / 250;
+  width: clamp(300px, 40vw, 540px);
+  flex-shrink: 0;
+}
+
+.main-video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .video-wrapper {
   position: relative;
   display: inline-block;
+  height: max-content;
+  width: max-content;
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .mainVideoPic {
-  position: relative;
   display: flex;
   align-items: flex-start;
+
   gap: 15px;
   border: none;
   background: none;
   cursor: pointer;
   text-align: left;
+  height: auto;
+  width: 100%;
 }
 
 .mainVideoPic img {
-  display: block;
-  width: 540px;
+  max-width: 540px;
   height: auto;
-  position: relative;
+  flex-shrink: 0;
 }
 
 .video-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 6px;
-  height: 250px;
 }
 
 .video-timecode {
   position: absolute;
   color: azure;
   border-radius: 12px;
-  width: 47px;
-  height: 24px;
-  font-family: "Mulish", sans-serif;
+  width: clamp(35px, 8vw, 47px);
+  height: clamp(18px, 4vw, 24px);
   text-align: center;
-  font-size: 14px;
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
 
   bottom: 8px;
   right: 8px;
@@ -332,17 +368,21 @@ span.numberNotifications {
 }
 
 .video-text {
-  font-family: "Mulish", sans-serif;
+  max-width: 100%;
   color: rgb(187, 186, 186);
+  font-size: clamp(10px, 1vw, 14px);
+  line-height: 1.4;
 }
 
 .chanelVideoAndRecommendet {
   display: flex;
+  max-height: 100%;
 }
 
 .recommendet-channels {
   display: flex;
   flex-direction: column;
+  justify-self: flex-start;
 }
 
 .logo-recommendet {
@@ -356,9 +396,53 @@ span.numberNotifications {
 }
 
 p.recommendedUser {
-  font-family: "Mulish", sans-serif;
   font-size: 18px;
   white-space: nowrap;
   padding-left: 10px;
+}
+
+.other-channel-videos {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  padding: 10px 0;
+}
+
+.other-channel-videos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-arrows {
+  padding-right: 3%;
+}
+
+.navigation-arrows button img {
+  padding-right: 3%;
+  width: 28px;
+  height: 28px;
+  padding-left: 20%;
+}
+
+.other-video-info {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bold-other-video {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+}
+
+.otherVideoPic {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+
+  flex: 0 0 auto;
+  width: clamp(180px, 25vw, 270px);
 }
 
